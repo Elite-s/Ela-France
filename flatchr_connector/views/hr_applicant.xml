@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="flatchr_connector_hr_applicant_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr..applicant.view.form.flatchr_connector.inherit</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <field name="email_from" position="before">
+                <field name="applicant_source"/>
+                <field name="date_store"/>
+            </field>
+        </field>
+    </record>
+</odoo>

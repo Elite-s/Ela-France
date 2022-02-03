@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="cron_get_jobs_from_flatchr" model="ir.cron">
+            <field name="name">Get jobs from Flatchr</field>
+            <field name="interval_number">12</field>
+            <field name="active">False</field>
+            <field name="interval_type">hours</field>
+            <field name="model_id" ref="model_hr_job"/>
+            <field name="code"><![CDATA[
+model.fetch_flatchr_data()
+            ]]></field>
+        </record>
+    </data>
+</odoo>
