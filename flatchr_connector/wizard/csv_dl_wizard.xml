@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="flatchr_connector_csv_dl_wizard" model="ir.ui.view">
+        <field name="name">Télécharger les CVs des candidats</field>
+        <field name="model">csv.dl.wizard</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <sheet>
+                    <group>
+                        <div class="alert alert-info" role="alert" style="height: 40px; margin-bottom:0px;">
+                            <strong>Le fichier doit contenir les champs: ["Nom";"Email";"CV";"Offre"] dans cet ordre, peut importe s'il y'a des champs supplémentaires derrière.</strong>
+                        </div>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="csv_file"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Confirmer" name="csv_dl_apply" type="object" class="btn-primary"/>
+                        <button string="Annuler" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--<template id="assets_backend_inherit_flatchr_connector_csv_dl" inherit_id="web.assets_backend" name="Télécharger les CVs des candidats">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/flatchr_connector/static/src/js/flatchr_connector_csv_dl_tree_button.js"></script>
+        </xpath>
+    </template>-->
+
+    <record id="flatchr_connector_csv_dl_wizard_action" model="ir.actions.act_window">
+        <field name="name">Télécharger les CVs des candidats</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">csv.dl.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="flatchr_connector_csv_dl_wizard"/>
+        <field name="target">new</field>
+    </record>
+    
+</odoo>

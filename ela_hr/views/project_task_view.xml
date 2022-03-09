@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="ela_hr_view_task_form2" model="ir.ui.view">
+        <field name="name">ela.hr.view.task.form2</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//page[@name='description_page']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='extra_info']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='project_id']" position="replace">
+            </xpath>
+
+            <xpath expr="//field[@name='user_id']" position="replace">
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <group>
+                    <group>
+                        <field name="applicant_id"/>
+                        <field name="user_id"/>
+                    </group>
+                    <group>
+                        <field name="project_id"/>
+                    </group>
+                </group>
+                <group name="formation" string="Formation">
+                    <group>
+                        <field name="certification"/>
+                        <field name="dispositif"/>
+                        <field name="accompagnement"/>
+                        <field name="connaissance"/>
+                    </group>
+                    <group>
+                        <field name="niveau"/>
+                        <field name="nombre_dheures"/>
+                        <field name="date_entree_call"/>
+                        <field name="date_inscription"/>
+                    </group>
+                </group>
+                <group name="pedagogie" string="Pédagogie">
+                    <group>
+                        <field name="login"/>
+                        <field name="mot_de_passe"/>
+                        <field name="date_entree"/>
+                        <field name="workhour_available_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="plateforme"/>
+                        <field name="motivation_appreciation" widget="priority"/>
+                        <field name="date_fin"/>
+                        <field name="test_result"/>
+                    </group>
+                </group>
+                <group string="Tableau de suivi">
+                  <field name="ligne_suivi_ids" nolabel="1">
+                      <tree editable="bottom">
+                          <field name="date"/>
+                          <field name="hours_number"/>
+                          <field name="objective"/>
+                          <field name="progress" widget="progressbar"/>
+                      </tree>
+                  </field>
+                </group>
+            </xpath>
+        </field>                
+    </record>
+
+    
+    <!--<record id="hr_kanban_view_applicant" model="ir.ui.view">
+        <field name="name">hr.kanban.view.flatchr.applicant</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_kanban_view_applicant"/>
+        <field name="arch" type="xml">
+            <field name="job_id" position="attributes">
+                <attribute name="widget">badge</attribute>
+            </field>
+            <field name="user_id" position="after">
+                <field name="date_last_stage_update" display="full" widget="date"/>
+                <field name="date_open" display="full" widget="date" attrs="{}" invisible="1"/>
+            </field>
+        </field>
+    </record>-->
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_ela_hr_recruitmentt_responsible" model="res.groups">
+        <field name="name">Responsable</field>
+        <field name="implied_ids" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+        <field name="category_id" ref="base.module_category_human_resources_recruitment"/>
+    </record>
+
+    <record id="hr_recruitment.group_hr_recruitment_manager" model="res.groups">
+        <field name="implied_ids" eval="[(6, 0, [ref('ela_hr.group_ela_hr_recruitmentt_responsible')])]"/>
+    </record>
+
+    <record id="rule_hr_applicant_only_owned" model="ir.rule">
+        <field name="name">Candidate User: Only owned</field>
+        <field name="model_id" ref="model_hr_applicant"/>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+        <field name="domain_force">[('user_id', '=', user.id)]</field>
+    </record>
+
+    <record id="rule_hr_applicant_see_all" model="ir.rule">
+        <field name="name">Candidate Manager: See all</field>
+        <field name="model_id" ref="model_hr_applicant"/>
+        <field name="groups" eval="[(4, ref('ela_hr.group_ela_hr_recruitmentt_responsible'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+
+    <record id="rule_mail_message_only_owned" model="ir.rule">
+        <field name="name">Mail message User: Only owned</field>
+        <field name="model_id" ref="model_mail_message"/>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_user'))]"/>
+        <field name="domain_force">[('is_manager', '=', False)]</field>
+    </record>
+
+    <record id="rule_mail_message_see_all" model="ir.rule">
+        <field name="name">Mail massage Manager: See all</field>
+        <field name="model_id" ref="model_mail_message"/>
+        <field name="groups" eval="[(4, ref('hr_recruitment.group_hr_recruitment_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+</odoo>

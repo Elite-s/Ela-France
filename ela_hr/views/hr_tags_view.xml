@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Vues Tree -->
+    <record id="view_hr_applicant_skill_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.skill.tree</field>
+        <field name="model">hr.applicant.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_applicant_contract_type_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.contract.type.tree</field>
+        <field name="model">hr.applicant.contract.type</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_applicant_workzone_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.workzone.tree</field>
+        <field name="model">hr.applicant.workzone</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_applicant_workhour_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.workhour.tree</field>
+        <field name="model">hr.applicant.workhour</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_applicant_benefit_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.benefit.tree</field>
+        <field name="model">hr.applicant.benefit</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_applicant_workhour_available_tree" model="ir.ui.view">
+        <field name="name">hr.applicant.workhour.available.tree</field>
+        <field name="model">hr.applicant.workhour.available</field>
+        <field name="arch" type="xml">
+            <tree string="Compétence" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="action_hr_applicant_skill_tree">
+        <field name="name">Compétence</field>
+        <field name="res_model">hr.applicant.skill</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_applicant_contract_type_tree">
+        <field name="name">Type de contrat</field>
+        <field name="res_model">hr.applicant.contract.type</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_applicant_workzone_tree">
+        <field name="name">Zone de travail</field>
+        <field name="res_model">hr.applicant.workzone</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_applicant_workhour_tree">
+        <field name="name">Horaire</field>
+        <field name="res_model">hr.applicant.workhour</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_applicant_benefit_tree">
+        <field name="name">Avantage</field>
+        <field name="res_model">hr.applicant.benefit</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_applicant_workhour_available_tree">
+        <field name="name">Horaire disponible</field>
+        <field name="res_model">hr.applicant.workhour.available</field>
+        <field name="view_mode">tree</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p>
+            </p>
+        </field>
+    </record>
+
+    <!-- Menus -->
+    <menuitem id="menu_config_tags"
+        name="Étiquettes candidats"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        parent="hr_recruitment.menu_hr_recruitment_configuration"
+        sequence="9"
+    />
+
+    <menuitem id="menu_config_skill"
+        name="Compétence"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_skill_tree"
+        parent="menu_config_tags"
+        sequence="0"
+    />
+
+    <menuitem id="menu_config_contract_type"
+        name="Type de contrat"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_contract_type_tree"
+        parent="menu_config_tags"
+        sequence="1"
+    />
+
+    <menuitem id="menu_config_workzone"
+        name="Zone de travail"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_workzone_tree"
+        parent="menu_config_tags"
+        sequence="2"
+    />
+    
+    <menuitem id="menu_config_workhour"
+        name="Horaire"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_workhour_tree"
+        parent="menu_config_tags"
+        sequence="3"
+    />
+
+    <menuitem id="menu_config_benefit"
+        name="Avantage"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_benefit_tree"
+        parent="menu_config_tags"
+        sequence="4"
+    />
+
+    <menuitem id="menu_config_workhour_available"
+        name="Horaire disponible"
+        groups="hr_recruitment.group_hr_recruitment_manager"
+        action="action_hr_applicant_workhour_available_tree"
+        parent="menu_config_tags"
+        sequence="5"
+    />
+</odoo>

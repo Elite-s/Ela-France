@@ -1,0 +1,456 @@
+
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* flatchr_connector
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-10 15:52+0000\n"
+"PO-Revision-Date: 2022-02-10 17:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__job_count
+msgid "# Jobs"
+msgstr "Nombre de postes"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "(Save before testing)"
+msgstr "(Enregistrer avant de tester)"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">API key</span>"
+msgstr "<span class=\"o_form_label\">Clé API</span>"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Company key</span>"
+msgstr "<span class=\"o_form_label\">Clé de la société</span>"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Last synchronisation date</span>"
+msgstr "<span class=\"o_form_label\">Dernière date de synchronisation</span>"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Slug</span>"
+msgstr "<span class=\"o_form_label\">Slug</span>"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Synchronisation period</span>"
+msgstr "<span class=\"o_form_label\">Période de synchronisation</span>"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Token</span>"
+msgstr "<span class=\"o_form_label\">Token</span>"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__flatchr_is_cron_active
+msgid "Active"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__activity_id
+msgid "Activity"
+msgstr "Secteur d'activité"
+
+#. module: flatchr_connector
+#: model:ir.model.constraint,message:flatchr_connector.constraint_hr_activity_name_uniq
+msgid "Activity already exists !"
+msgstr "Le secteur d'activité existe déjà !"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_applicant
+msgid "Applicant"
+msgstr "Candidat"
+
+#. module: flatchr_connector
+#: code:addons/flatchr_connector/models/.ipynb_checkpoints/hr_applicant-checkpoint.py:0
+#: code:addons/flatchr_connector/models/hr_applicant.py:0
+#, python-format
+msgid "Applicant jobs"
+msgstr "Postes du candidat"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__applicant_source
+msgid "Applicant source"
+msgstr "Source du candidat"
+
+#. module: flatchr_connector
+#: code:addons/flatchr_connector/models/.ipynb_checkpoints/hr_applicant-checkpoint.py:0
+#: code:addons/flatchr_connector/models/hr_applicant.py:0
+#, python-format
+msgid "Applications"
+msgstr "Candidatures"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__channel_id
+msgid "Channel"
+msgstr "Filière"
+
+#. module: flatchr_connector
+#: model:ir.model.constraint,message:flatchr_connector.constraint_hr_channel_name_uniq
+msgid "Channel already exists !"
+msgstr "La filière existe déjà !"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.view_hr_job_flatchr_form
+msgid "Commodities"
+msgstr "Commodités"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration API Flatchr"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__contract_type_id
+msgid "Contract type"
+msgstr "Type de contrat"
+
+#. module: flatchr_connector
+#: model:ir.model.constraint,message:flatchr_connector.constraint_hr_contract_type_name_uniq
+msgid "Contract type already exists !"
+msgstr "Le type de contrat existe déjà !"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__create_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__create_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__create_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__create_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__create_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__create_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__create_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__create_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "Days"
+msgstr "Jours"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__description
+msgid "Description"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__driver_license
+msgid "Driver license"
+msgstr "Permis de conduire"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__name
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__education_level_id
+msgid "Education level"
+msgstr "Niveau d'étude"
+
+#. module: flatchr_connector
+#: model:ir.model.constraint,message:flatchr_connector.constraint_hr_education_level_name_uniq
+msgid "Education level already exists !"
+msgstr "Le niveau d'étude existe déjà !"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__experience
+msgid "Experience"
+msgstr "Expérience demandée"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "Flatchr API Settings"
+msgstr "Configurations de l'API Flatchr"
+
+#. module: flatchr_connector
+#: code:addons/flatchr_connector/models/.ipynb_checkpoints/res_config_settings-checkpoint.py:0
+#: code:addons/flatchr_connector/models/res_config_settings.py:0
+#, python-format
+msgid "Flatchr API Test"
+msgstr "Test API Flatchr"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__flatchr_api_key
+msgid "Flatchr API key"
+msgstr "Clé API"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__flatchr_applicant_id
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_partner__flatchr_applicant_id
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_users__flatchr_applicant_id
+msgid "Flatchr Applicant ID"
+msgstr "ID Flatchr du candidat"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "Flatchr Connector"
+msgstr "Connecteur Flatchr"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "Flatchr Synchronisation Settings"
+msgstr "Paramètres de synchronisation Flatchr"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__flatchr_company_key
+msgid "Flatchr company key"
+msgstr "Clé de la société"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__flatchr_job_id
+msgid "Flatchr job ID"
+msgstr "ID Flatchr du poste"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__flatchr_enterprise_slug
+msgid "Flatchr slug"
+msgstr "Slug"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__flatchr_token
+msgid "Flatchr token"
+msgstr "Token"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.view_hr_job_flatchr_form
+msgid "General information"
+msgstr "Informations générale"
+
+#. module: flatchr_connector
+#: model:ir.actions.server,name:flatchr_connector.cron_get_jobs_from_flatchr_ir_actions_server
+#: model:ir.cron,cron_name:flatchr_connector.cron_get_jobs_from_flatchr
+#: model:ir.cron,name:flatchr_connector.cron_get_jobs_from_flatchr
+msgid "[ELA] Get jobs from Flatchr"
+msgstr "[ELA] Récupérer les candidatures et poste de recrutement de Flatchr"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_activity
+msgid "HR activity"
+msgstr "Secteur d'activité"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_channel
+msgid "HR channel"
+msgstr "Filière"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_contract_type
+msgid "HR contract type"
+msgstr "Type de contrat"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_education_level
+msgid "HR education level"
+msgstr "Niveau d'étude"
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_metier
+msgid "HR metier"
+msgstr "Métier"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__handicap
+msgid "Handicap"
+msgstr "Ouvert aux personnes en situation d'handicap"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__id
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: flatchr_connector
+#: code:addons/flatchr_connector/models/.ipynb_checkpoints/res_config_settings-checkpoint.py:0
+#: code:addons/flatchr_connector/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"It looks like something went wrong when contacting the Flatchr servers. You "
+"might want to double checks your slug, API key and company key but if the "
+"problem persists after that please contact Odoo support."
+msgstr ""
+"Il semblerai quelque chose ne s'est pas bien passée lors de la "
+"communication avec Flatchr. Veuillez vérifier vos informations de "
+"connexion, et si le problème persiste, veuillez contacter le support. "
+
+#. module: flatchr_connector
+#: model:ir.model,name:flatchr_connector.model_hr_job
+msgid "Job Position"
+msgstr "Poste"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant__job_state
+msgid "Job state"
+msgstr "État du poste"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.hr_applicant_view_form_flatchr_inherit
+msgid "Jobs"
+msgstr "Postes"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.hr_applicant_view_form_flatchr_inherit
+msgid "Job applications"
+msgstr "Postes de candidatures"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_applicant____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__write_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__write_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__write_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__write_uid
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_activity__write_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_channel__write_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_contract_type__write_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_education_level__write_date
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__last_sync_date
+msgid "Last sync date"
+msgstr "Dernière date de synchronisation"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__mensuality
+msgid "Mensuality"
+msgstr "Période de salaire"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__metier_id
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_metier__name
+msgid "Metier"
+msgstr "Métier"
+
+#. module: flatchr_connector
+#: model:ir.model.constraint,message:flatchr_connector.constraint_hr_metier_name_uniq
+msgid "Metier already exists !"
+msgstr "Le métier d'étude existe déjà !"
+
+#. module: flatchr_connector
+#: code:addons/flatchr_connector/models/.ipynb_checkpoints/res_config_settings-checkpoint.py:0
+#: code:addons/flatchr_connector/models/res_config_settings.py:0
+#, python-format
+msgid ""
+"Odoo was succesfully able to retrieve jobs and applicants from the Flatchr "
+"servers."
+msgstr ""
+"Odoo à récupéré les candidatures et poste de recrutement de Flatchr avec "
+"succès"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__partial
+msgid "Partial"
+msgstr "Temps partiel"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__remote
+msgid "Remote"
+msgstr "Télétravail"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_hr_job__salary
+msgid "Salary"
+msgstr "Salaire"
+
+#. module: flatchr_connector
+#: model:ir.model.fields,help:flatchr_connector.field_hr_applicant__job_state
+msgid ""
+"Set whether the recruitment process is open or closed for this job position."
+msgstr ""
+
+#. module: flatchr_connector
+#: model:ir.model.fields,field_description:flatchr_connector.field_res_config_settings__sync_period
+msgid "Sync period"
+msgstr "Période de synchronisation"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "Test your credentials"
+msgstr "Testez votre login"
+
+#. module: flatchr_connector
+#: model_terms:ir.ui.view,arch_db:flatchr_connector.res_config_settings_view_form
+msgid "This option activates cron job \"Get jobs from Flatchr\""
+msgstr ""
+"Cette option active la tâche planifiée \"Récupérer les candidatures et "
+"poste de recrutement de Flatchr\""
+
+#. module: flatchr_connector
+#: model:ir.model.fields.selection,name:flatchr_connector.selection__hr_job__mensuality__y
+msgid "annuel"
+msgstr "Annuel"
+
+#. module: flatchr_connector
+#: model:ir.model.fields.selection,name:flatchr_connector.selection__hr_job__mensuality__h
+msgid "horaire"
+msgstr "Horaire"
+
+#. module: flatchr_connector
+#: model:ir.model.fields.selection,name:flatchr_connector.selection__hr_job__mensuality__m
+msgid "mensuel"
+msgstr "Mensuel"

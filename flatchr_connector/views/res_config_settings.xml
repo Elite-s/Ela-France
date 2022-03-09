@@ -24,13 +24,13 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-6 o_setting_box" id="flatchr_enterprise_slug">
+                        <div class="col-12 col-lg-6 o_setting_box" id="flatchr_token">
                             <div class="o_setting_right_pane">
                                 <div class="content-group">
                                     <div class="mt16">
-                                        <span class="o_form_label">Slug</span>
+                                        <span class="o_form_label">Token</span>
                                         <div class="text-muted content-group mt16">
-                                            <field name="flatchr_enterprise_slug" class="oe_inline"/>
+                                            <field name="flatchr_token" class="oe_inline"/>
                                         </div>
                                     </div>
                                 </div>
@@ -50,6 +50,19 @@
                             </div>
                         </div>
 
+                        <div class="col-12 col-lg-6 o_setting_box" id="flatchr_enterprise_slug">
+                            <div class="o_setting_right_pane">
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <span class="o_form_label">Slug</span>
+                                        <div class="text-muted content-group mt16">
+                                            <field name="flatchr_enterprise_slug" class="oe_inline"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-12 col-lg-6 o_setting_box" id="flatchr_is_cron_active">
                             <div class="o_setting_left_pane" name="flatchr_is_cron_active">
                                 <field name="flatchr_is_cron_active"/>
@@ -63,10 +76,42 @@
                                     <button name="test_flatchr_api_call" type="object" string="Test your credentials" class="oe_highlight"/> (Save before testing)
                                 </div>
                             </div>
-
                         </div>
                     </div>
+
+                    <h2>Flatchr Synchronisation Settings</h2>
+                    <div class="row mt16 o_settings_container">
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="last_sync_date">
+                            <div class="o_setting_right_pane">
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <span class="o_form_label">Last synchronisation date</span>
+                                        <div class="text-muted content-group mt16">
+                                            <field name="last_sync_date" readonly="1" class="oe_inline"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box" id="sync_period">
+                            <div class="o_setting_right_pane">
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <span class="o_form_label">Synchronisation period</span>
+                                        <div class="text-muted content-group mt16">
+                                            <field name="sync_period" class="oe_inline"/>Days
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </xpath>
         </field>
     </record>

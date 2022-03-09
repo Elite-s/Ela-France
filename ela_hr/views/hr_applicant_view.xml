@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="ela_hr_applicant_view_form" model="ir.ui.view">
+        <field name="name">ela.hr.applicant.view.form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_applications_email']" position="after">
+                <button name="action_show_task" class="oe_stat_button" icon="fa-calendar" type="object" help="Formation associée" attrs="{'invisible': [('task_id', '=', False)]}">
+                    <field name="task_id" widget="statinfo" string="Formation"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='source_id']" position="replace">
+                <field name="skill_ids" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//field[@name='priority']" position="replace">
+                <xpath expr="//field[@name='medium_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_phone']" position="after">
+                <field name="date_naissance"/>
+                <field name="lieu_naissance"/>
+            </xpath>
+
+            <field name="partner_id" position="before">
+                <field name="genre" widget="radio" options="{'horizontal': true}" />
+            </field>
+            <field name="categ_ids" position="before">
+                <field name="situation"/>
+                <field name="appreciation" widget="priority"/>
+            </field>
+            <xpath expr="//field[@name='survey_id']" position="before">
+                <xpath expr="//field[@name='job_id']" position="move"/>
+                <xpath expr="//field[@name='department_id']" position="move"/>
+                <xpath expr="//field[@name='user_id']" position="move"/>
+            </xpath>
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[4]/label[1]" position="before">
+                <field name="contract_type_ids" widget="many2many_tags"/>
+                <xpath expr="//field[@name='availability']" position="move"/>
+            </xpath>
+
+            <xpath expr="//label[@for='salary_expected']" position="replace"/>
+            <xpath expr="//label[@for='salary_proposed']" position="replace"/>
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[4]/div" position="replace"/>
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[4]/div" position="replace"/>
+
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group name="formation" string="Formation">
+                    <group>
+                        <field name="formation" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                        <field name="certification"/>
+                        <field name="dispositif"/>
+                        <field name="accompagnement"/>
+                        <field name="connaissance"/>
+                    </group>
+                    <group>
+                        <field name="niveau"/>
+                        <field name="nombre_dheures"/>
+                        <field name="date_entree_call"/>
+                        <field name="date_inscription"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page" position="before">
+                <page string="Recrutement">
+                    <group>
+                        <group>
+                            <field name="workzone_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                            <field name="workhour_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                            <field name="mobilite"/>
+                            <field name="heure_semaine"/>
+                            <field name="appreciation_hr" widget="priority"/>
+                        </group>
+                        <group>
+                            <field name="contract_type_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                            <field name="salaire_minimum"/>
+                            <field name="salaire_propose"/>
+                            <field name="benefit_wished_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                            <field name="benefit_offered_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Pédagogie">
+                    <group>
+                        <group>
+                            <field name="login"/>
+                            <field name="mot_de_passe"/>
+                            <field name="date_entree"/>
+                            <field name="workhour_available_ids" widget="many2many_tags" options="{'no_create_edit': True, 'no_quick_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="plateforme"/>
+                            <field name="motivation_appreciation" widget="priority"/>
+                            <field name="date_fin"/>
+                            <field name="test_result"/>
+                        </group>
+                    </group>
+                    <group string="Tableau de suivi">
+                        <field name="ligne_suivi_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="date"/>
+                                <field name="hours_number"/>
+                                <field name="objective"/>
+                                <field name="progress" widget="progressbar"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>                
+    </record>
+
+    
+    <record id="hr_kanban_view_applicant" model="ir.ui.view">
+        <field name="name">hr.kanban.view.flatchr.applicant</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_kanban_view_applicant"/>
+        <field name="arch" type="xml">
+            <field name="job_id" position="attributes">
+                <attribute name="widget">badge</attribute>
+            </field>
+            <field name="user_id" position="after">
+                <field name="date_last_stage_update" display="full" widget="date"/>
+                <field name="date_open" display="full" widget="date" attrs="{}" invisible="1"/>
+            </field>
+            <field name="legend_done" position="after">
+                <field name="task_id" invisible="1"/>
+            </field>
+        </field>
+    </record>
+</odoo>

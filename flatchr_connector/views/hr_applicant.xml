@@ -1,14 +1,75 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <record id="flatchr_connector_hr_applicant_view_form_inherit" model="ir.ui.view">
-        <field name="name">hr..applicant.view.form.flatchr_connector.inherit</field>
+    <record id="hr_applicant_view_form_flatchr_inherit" model="ir.ui.view">
+        <field name="name">hr.applicant.view.form.flatchr.inherit</field>
         <field name="model">hr.applicant</field>
         <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
         <field name="arch" type="xml">
-            <field name="email_from" position="before">
-                <field name="applicant_source"/>
-                <field name="date_store"/>
+            <field name="source_id" position="after">
+                <field name="applicant_source" readonly='1'/>
             </field>
+            <field name="email_cc" position="replace">
+            </field>
+            <field name="partner_mobile" position="replace">
+            </field>
+            <xpath expr="//button[@name='action_applications_email']" position="after">
+                <button name="action_show_jobs" class="oe_stat_button" icon="fa-edit" type="object" help="Job applications">
+                    <field name="job_count" widget="statinfo" string="Jobs"/>
+                </button>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page name="misc" string="Divers" groups="hr_recruitment.group_hr_recruitment_manager">
+                        <group>
+                            <group>
+                                <field name="flatchr_applicant_id" readonly='1'/>
+                                <field name="date_source" readonly="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+            <field name="name" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="partner_name" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="partner_id" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <!--<field name="job_id" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="email_from" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="partner_phone" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>
+            <field name="partner_mobile" position="attributes">
+                <attribute name="readonly">1</attribute>
+            </field>-->
         </field>
     </record>
+
+    <record id="flatchr_connector_crm_case_tree_view_job" model="ir.ui.view">
+        <field name="name">flatchr.connector.crm.case.tree.view.job</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <header>
+                    <button name="open_dl_wizard" string="Importer CVs" groups="hr_recruitment.group_hr_recruitment_manager" class="oe_edit_only" type="object"/>
+                </header>
+            </xpath>
+            <field name="priority" position="replace">
+            </field>
+            <field name="name" position="replace">
+            </field>
+            <field name="job_id" position="after">
+                <field name="job_state"/>
+            </field>
+        </field>
+    </record>    
 </odoo>

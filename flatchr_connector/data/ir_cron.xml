@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="cron_get_jobs_from_flatchr" model="ir.cron">
-            <field name="name">Get jobs from Flatchr</field>
+            <field name="name">[ELA] Get jobs from Flatchr</field>
             <field name="interval_number">12</field>
             <field name="active">False</field>
             <field name="interval_type">hours</field>
